@@ -64,8 +64,8 @@ async function analyzeImage(imageBuffer, dictOfVars) {
     const cleanedResponse = responseText
       .replace(/```json/g, '') // Remove the opening Markdown code block
       .replace(/```/g, '')     // Remove the closing Markdown code block
-      .replace(/'/g, '"');     // Replace single quotes with double quotes for valid JSON
-
+      .replace(/'/g, '"')     // Replace single quotes with double quotes for valid JSON
+      .replace(/True/g, 'true').replace(/False/g, 'false');  // Replace True with true as Js accepts true unlike Python which accepts True
     // Try parsing the cleaned response
     let answers = [];
     try {
