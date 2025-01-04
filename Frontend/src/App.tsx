@@ -5,7 +5,7 @@ import { MantineProvider } from "@mantine/core";
 import Home from "@/screens/home";
 
 import '@/index.css';
-import path from 'node:path';
+// import path from 'node:path';
 
 const paths = [
   {
